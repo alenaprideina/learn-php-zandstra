@@ -3,6 +3,7 @@
 
 namespace App\Product;
 
+
 class CDProduct extends ShopProduct
 {
     private $playLength;
@@ -28,5 +29,4 @@ class CDProduct extends ShopProduct
     {
         return parent::getSummaryLine() . " Время звучания: {$this->getPlayLength()}";
     }
-
 }

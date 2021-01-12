@@ -14,9 +14,4 @@ abstract class ShopProductWriter
     }
 
     abstract public function write();
-//    {
-//        foreach ($this->products as $shopProduct) {
-//            print($shopProduct->getSummaryLine() . "\n");
-//        }
-//    }
 }

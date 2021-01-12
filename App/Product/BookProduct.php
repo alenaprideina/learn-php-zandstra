@@ -3,6 +3,7 @@
 
 namespace App\Product;
 
+
 class BookProduct extends ShopProduct
 {
     private $numPages;

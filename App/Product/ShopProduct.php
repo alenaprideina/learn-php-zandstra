@@ -3,6 +3,7 @@
 
 namespace App\Product;
 
+
 use App\Chargeable;
 
 class ShopProduct implements Chargeable
