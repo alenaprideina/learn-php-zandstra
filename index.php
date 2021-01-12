@@ -19,23 +19,6 @@ $product = new ShopProduct(
 $writer = new TextProductWriter();
 $writer->addProduct($product);
 
-//$db_name = 'products.db';
-
-//$db = new SQLite3($db_name);
-//$db->exec('
-//    CREATE TABLE IF NOT EXISTS products (
-//        id INTEGER PRIMARY KEY AUTOINCREMENT,
-//        type TEXT,
-//        firstname TEXT,
-//        mainname TEXT,
-//        title TEXT,
-//        price FLOAT,
-//        numpages INT,
-//        playlength INT,
-//        discount INT
-//    )
-//');
-
 $db_name = 'db.sqlite';
 $dsn = "sqlite:/" . __DIR__ . "/$db_name";
 $pdo = new \PDO($dsn, null, null);

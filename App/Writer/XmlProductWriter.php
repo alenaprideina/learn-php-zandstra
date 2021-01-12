@@ -3,8 +3,7 @@
 
 namespace App\Writer;
 
-
-use App\Product\ShopProductWriter;
+use App\Writer\ShopProductWriter;
 
 class XmlProductWriter extends ShopProductWriter
 {

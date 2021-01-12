@@ -1,8 +1,9 @@
 <?php
 
 
-namespace App\Product;
+namespace App\Writer;
 
+use App\Product\ShopProduct;
 
 abstract class ShopProductWriter
 {
