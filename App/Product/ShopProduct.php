@@ -3,7 +3,9 @@
 
 namespace App\Product;
 
-class ShopProduct
+use App\Chargeable;
+
+class ShopProduct implements Chargeable
 {
     private $id;
     private $title;
@@ -101,7 +103,7 @@ class ShopProduct
         return $this->discount;
     }
 
-    public function getPrice()
+    public function getPrice(): float
     {
         return $this->price - $this->discount;
     }

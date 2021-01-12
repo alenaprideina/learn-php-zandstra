@@ -29,7 +29,7 @@ class BookProduct extends ShopProduct
         return parent::getSummaryLine() . " Количество страниц: {$this->getNumberOfPages()}";
     }
 
-    public function getPrice()
+    public function getPrice(): float
     {
         return $this->price;
     }
