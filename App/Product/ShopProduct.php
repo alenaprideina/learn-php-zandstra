@@ -3,11 +3,18 @@
 
 namespace App\Product;
 
-
 use App\Chargeable;
+use App\IdentityTrait;
+use App\PriceUtilities;
+use App\TaxTools;
 
 class ShopProduct implements Chargeable
 {
+    use TaxTools, PriceUtilities, IdentityTrait {
+        TaxTools::calculateTax insteadof PriceUtilities;
+        PriceUtilities::calculateTax as basicTax;
+    }
+
     private $id;
     private $title;
     private $producerMainName;
@@ -20,8 +27,8 @@ class ShopProduct implements Chargeable
         string $title,
         string $firstName,
         string $mainName,
-        float $price)
-    {
+        float $price
+    ) {
         $this->title    = $title;
         $this->producerFirstName    = $firstName;
         $this->producerMainName     = $mainName;
