@@ -31,8 +31,7 @@ $writer->write();
 
 // пример использования трейтов
 print $product->calculateTax(150) . "\n";
-print $product->basicTax(150) . "\n";
 print $product->generateId() . "\n";
 
 $ut1 = new UtilityService();
-print $ut1->calculateTax(100) . "\n";
+print $ut1::calculateTax(100) . "\n";

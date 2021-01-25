@@ -6,14 +6,10 @@ namespace App\Product;
 use App\Chargeable;
 use App\IdentityTrait;
 use App\PriceUtilities;
-use App\TaxTools;
 
 class ShopProduct implements Chargeable
 {
-    use TaxTools, PriceUtilities, IdentityTrait {
-        TaxTools::calculateTax insteadof PriceUtilities;
-        PriceUtilities::calculateTax as basicTax;
-    }
+    use PriceUtilities, IdentityTrait;
 
     private $id;
     private $title;
