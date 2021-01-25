@@ -33,5 +33,5 @@ $writer->write();
 print $product->calculateTax(150) . "\n";
 print $product->generateId() . "\n";
 
-$ut1 = new UtilityService();
-print $ut1::calculateTax(100) . "\n";
+$ut1 = new UtilityService(100);
+print $ut1->getFinalPrice() . "\n";

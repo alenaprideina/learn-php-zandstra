@@ -116,4 +116,9 @@ class ShopProduct implements Chargeable
     {
         return $this->title;
     }
+
+    public function getTaxRate(): float
+    {
+        return 17;
+    }
 }
